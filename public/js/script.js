@@ -1,3 +1,7 @@
+let inputValue;
+
+//This takes the numbers that the user inputs and converts them
+//from a string into an array of numbers
 function stringToArray(string) {
   let tempArray = Array.from(string);
   let array = [];
@@ -11,6 +15,8 @@ function stringToArray(string) {
   return array;
 };
 
+//The input is an array of numbers.  The output is the
+//sum of those numbers.
 function sum(arrayInput) {
   let array = stringToArray(arrayInput);
   return array.reduce((acc, cur) => {
@@ -18,26 +24,20 @@ function sum(arrayInput) {
   });
 };
 
-function returnSum(array) {
-  let sumValue = sum(array);
-  return sumValue;
-};
-
+//Handler function for the input box
 function setInputValue(e) {
   inputValue = e.srcElement.value;
-  reducedValue = returnSum(inputValue);
 };
 
+//Handler function for the submit button
 function setReducedValue(e) {
-  document.getElementById("result").innerHTML = returnSum(inputValue);
+  let reducedValue = sum(inputValue);
+  let displayValue = `The sum of numbers is: <span style="color:red; font-weight:bold">${reducedValue}</span>`;
+  document.getElementById("result").innerHTML = displayValue;
 };
 
 let input = document.getElementById('input');
-let inputValue;
-let reducedValue;
+let submit = document.getElementById('submit');
 
 input.addEventListener('input', setInputValue);
-console.log(inputValue)
-
-let submit = document.getElementById('submit');
 submit.addEventListener('submit', setReducedValue);
