@@ -3,7 +3,7 @@ An Express application that serves up an HTML page that allows users to input nu
 The goal of the project is to use an Array method in the context of an Express app and HTML page (there are simpler ways of adding a list of numbers, so this project is not a recommendation of the reduce() method for that purpose!).
 ### Installing
 ```
-git clone git@github.com:onionpeel/express-array-reduce.git
+git clone https://github.com/onionpeel/express-array-reduce.git
 cd express-array-reduce
 npm install
 npm run dev
