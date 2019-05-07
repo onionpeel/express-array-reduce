@@ -33,11 +33,20 @@ function setInputValue(e) {
 function setReducedValue(e) {
   let reducedValue = sum(inputValue);
   let displayValue = `The sum of numbers is: <span style="color:red; font-weight:bold">${reducedValue}</span>`;
-  document.getElementById("result").innerHTML = displayValue;
+  result.innerHTML = displayValue;
+};
+
+//Clears the Array values input box.
+function resetValues(e) {
+  input.value = '';
+  result.innerHTML = '';
 };
 
 let input = document.getElementById('input');
 let submit = document.getElementById('submit');
+let result = document.getElementById('result');
+let reset = document.getElementById('reset');
 
 input.addEventListener('input', setInputValue);
 submit.addEventListener('submit', setReducedValue);
+reset.addEventListener('submit', resetValues);

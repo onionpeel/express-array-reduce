@@ -9,14 +9,15 @@
   <body>
     <div>
       <h3>Array.prototype.reduce()</h3>
-      <h4>Enter the values only of your array.  Separate the values by a comma.  Do not include any brackets [  ].</h4>
-      <h4>This makes use of the reduce() method to add the array values together and return them to the user.</h4>
+      <h4>Enter numeric values.  Separate the values by a comma.  Do not include any brackets [  ].</h4>
+      <h4>This makes use of the reduce() method to add the array values together and return the sum to the user.</h4>
       <div>
         <label for="input">Array values: </label>
-        <input id="input" type="text" name="array" />
+        <input id="input" type="text" name="array" value="" />
       </div>
       <div>
         <input id="submit" type="submit" onclick="setReducedValue()" value="Submit" />
+        <input id="reset" type="submit" onclick="resetValues()" value="Reset" />
       </div>
     </div>
 
